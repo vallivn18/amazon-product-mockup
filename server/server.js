@@ -7,7 +7,10 @@ const productRoutes = require("./routes/productRoutes");
 const cartRoutes = require("./routes/cartRoutes");
 
 const app = express();
-// app.use(cors());
+app.use(cors());
+app.use(cors({
+  origin: 'https://amazon-product-mockup-client.vercel.app'
+}));
 app.use(bodyParser.json());
 
 // Serve static files from the 'public' directory
