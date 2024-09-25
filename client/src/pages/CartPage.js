@@ -10,20 +10,24 @@ const CartPage = () => {
     const { state, loadCartItems, removeItemFromCart, updateQuantity } = useCart();
     const { items, discount } = state;
 
+    // Fetch cart items on component mount
     useEffect(() => {
-        loadCartItems(); // Fetch cart items on mount
+        loadCartItems();
     }, [loadCartItems]);
 
+    // Function to calculate the total price after discount
     const calculateTotalPrice = () => {
         const total = items.reduce((total, item) => total + item.variant.price * item.quantity, 0);
         return (total * ((100 - discount) / 100)).toFixed(2);
     };
 
+    // Function to calculate the original price before discount
     const calculateOriginalPrice = () => {
         const total = items.reduce((total, item) => total + item.variant.price * item.quantity, 0);
         return total.toFixed(2);
     };
 
+    // Render empty cart message if there are no items
     if (items.length === 0) {
         return (
             <div className="empty-cart">
