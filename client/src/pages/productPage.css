@@ -1,0 +1,200 @@
+/* Product Page Layout */
+.product-page-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.product-page-left {
+  flex: 1;
+}
+
+.product-page-right {
+  flex: 1;
+}
+
+.price{
+  color: #4211b4;
+  font-size: 50px;
+  margin:0
+}
+
+.tab-header {
+  display: flex;
+  gap: 20px;
+  border-bottom: 2px solid #ddd;
+  font-family: sans-serif;
+  overflow-x: auto; /* Enable horizontal scrolling for small screens */
+  white-space: nowrap; /* Prevent tab items from wrapping */
+}
+
+.tab-item {
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap; /* Ensure each tab stays in one line */
+}
+
+.tab-item.active {
+  border-bottom: 2px solid #6425f7;
+}
+
+.tab-content {
+  padding: 20px;
+  font-family:  Calibri;
+}
+
+.variant-options {
+  margin-top: 20px;
+}
+
+.variant-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* Make variant buttons wrap on smaller screens */
+}
+
+.variant-button.active {
+  border: 2px solid #7700ff;
+}
+
+.variant-thumbnail {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.action-buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* Stack buttons on smaller screens */
+  gap: 10px;
+}
+
+
+/* Updated styles for Add to Cart button */
+
+.add-to-cart-button:hover {
+  background-color: #6f01ff; /* Darken on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.add-to-cart-button:active {
+  transform: translateY(0); /* Reset lift effect on click */
+}
+
+.related-products-section {
+  margin-top: 40px;
+}
+
+.review-count {
+  margin-left: 10px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For small devices (mobile phones) */
+@media (max-width: 767px) {
+  .product-page-container {
+    flex-direction: column;
+  }
+
+  .product-page-left,
+  .product-page-right {
+    width: 100%;
+  }
+
+  .variant-buttons {
+    gap: 5px; /* Reduce gap for variant buttons on small screens */
+  }
+
+  .tab-header {
+    gap: 10px;
+    justify-content: start; /* Align tabs to the start */
+  }
+
+  .tab-item {
+    text-align: center;
+    padding: 10px 15px; /* Adjust tab item padding for small screens */
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .add-to-cart-button {
+    padding: 15px;
+  }
+
+  .variant-thumbnail {
+    width: 40px;
+    height: 40px;
+  }
+
+  .tab-content {
+    padding: 10px;
+  }
+}
+
+/* For medium devices (tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .product-page-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .tab-header {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .variant-buttons {
+    gap: 8px;
+  }
+
+  .action-buttons {
+    gap: 15px;
+  }
+
+  .add-to-cart-button {
+    padding: 12px 18px;
+  }
+
+  .tab-content {
+    padding: 15px;
+  }
+}
+
+/* For large devices (desktop) */
+@media (min-width: 1025px) {
+  .product-page-container {
+    flex-direction: row;
+    gap: 25px;
+  }
+
+  .variant-buttons {
+    gap: 12px;
+  }
+
+  .add-to-cart-button {
+    padding: 12px 24px;
+  }
+
+  .tab-content {
+    padding: 25px;
+  }
+}
+
+.stock-info{
+  margin-bottom: 10px;
+}
+
+.stock-status.out-of-stock {
+  color: red;
+  font-weight: bold;
+}
+
+.add-to-cart-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed; 
+}

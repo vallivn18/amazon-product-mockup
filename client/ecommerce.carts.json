@@ -1,0 +1,50 @@
+[{
+  "_id": {
+    "$oid": "66f0bb3adc67f89fbdb268d3"
+  },
+  "totalQuantity": 11,
+  "totalPrice": 11052,
+  "items": [
+    {
+      "productId": {
+        "$oid": "66ef3a09a9386459fe44f85a"
+      },
+      "variant": "Black",
+      "quantity": 3,
+      "_id": {
+        "$oid": "66f0bb3bdc67f89fbdb268dc"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "66ef3a09a9386459fe44f85a"
+      },
+      "variant": "Red",
+      "quantity": 1,
+      "_id": {
+        "$oid": "66f179414d99b19cb2ab2d7b"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "66ef3a09a9386459fe44f85a"
+      },
+      "variant": "Blue",
+      "quantity": 1,
+      "_id": {
+        "$oid": "66f1ce6b8183e5875b3b4520"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "66ef3a09a9386459fe44f85a"
+      },
+      "variant": "Purple",
+      "quantity": 6,
+      "_id": {
+        "$oid": "66f1d6bd609564f104cb5e92"
+      }
+    }
+  ],
+  "__v": 3
+}]

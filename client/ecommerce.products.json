@@ -1,0 +1,214 @@
+[{
+  "_id": {
+    "$oid": "66ef3a09a9386459fe44f85a"
+  },
+  "name": "Headphone",
+  "price": "999.00",
+  "description": "High-quality noise-canceling headphones.",
+  "images": [
+    "philips_headphones.jpg",
+    "headphones.jpg",
+    "headphone.jpg",
+    "philips.jpg"
+  ],
+  "variants": [
+    {
+      "color": "Black",
+      "price": "999.00",
+      "images": [
+        "headphone_black.jpg"
+      ]
+    },
+    {
+      "color": "White",
+      "price": "1000.00",
+      "images": [
+        "headphone_white.jpg"
+      ]
+    },
+    {
+      "color": "Purple",
+      "price": "1005.00",
+      "images": [
+        "headphone_purple.jpg"
+      ]
+    },
+    {
+      "color": "Red",
+      "price": "1010.00",
+      "images": [
+        "headphone_red.jpg"
+      ]
+    },
+    {
+      "color": "Blue",
+      "price": "1015.00",
+      "images": [
+        "headphone_blue.jpg"
+      ]
+    }
+  ],
+  "category": "Accessories",
+  "tags": [
+    "audio",
+    "accessories"
+  ],
+  "reviews": [
+    {
+      "rating": 5,
+      "comment": "Amazing sound quality!",
+      "createdAt": "2023-09-01T12:00:00Z"
+    },
+    {
+      "rating": 4,
+      "comment": "Very comfortable to wear.",
+      "createdAt": "2023-09-05T15:30:00Z"
+    }
+  ],
+  "averageRating": 4.5
+},
+{
+  "_id": {
+    "$oid": "66ef3a09a9386459fe44f85b"
+  },
+  "name": "Laptop",
+  "price": "50000.00",
+  "description": "Powerful laptop for professionals.",
+  "images": [
+    "laptop1.jpg",
+    "laptop2.jpg",
+    "laptop3.jpg"
+  ],
+  "variants": [
+    {
+      "storage": "256GB SSD",
+      "ram": "8GB",
+      "price": "60000.00",
+      "images": [
+        "laptop_256gb.jpg"
+      ]
+    },
+    {
+      "storage": "512GB SSD",
+      "ram": "16GB",
+      "price": "70000.00",
+      "images": [
+        "laptop_512gb.jpg"
+      ]
+    }
+  ],
+  "category": "Electronics",
+  "tags": [
+    "electronics",
+    "laptops"
+  ],
+  "reviews": [
+    {
+      "rating": 5,
+      "comment": "Best laptop I've ever owned.",
+      "createdAt": "2023-09-02T09:45:00Z"
+    },
+    {
+      "rating": 3,
+      "comment": "Good performance but heavy.",
+      "createdAt": "2023-09-06T10:15:00Z"
+    }
+  ],
+  "averageRating": 4
+},
+{
+  "_id": {
+    "$oid": "66ef3a09a9386459fe44f85c"
+  },
+  "name": "Tablet",
+  "price": "60000.00",
+  "description": "Lightweight tablet with a stunning display.",
+  "images": [
+    "tablet1.jpg",
+    "tablet2.jpg",
+    "tablet3.jpg"
+  ],
+  "variants": [
+    {
+      "storage": "64GB",
+      "price": "70000.00",
+      "images": [
+        "tablet_64gb.jpg"
+      ]
+    },
+    {
+      "storage": "128GB",
+      "price": "80000.00",
+      "images": [
+        "tablet_128gb.jpg"
+      ]
+    }
+  ],
+  "category": "Electronics",
+  "tags": [
+    "tablet",
+    "new"
+  ],
+  "reviews": [
+    {
+      "rating": 4,
+      "comment": "Great for reading and browsing.",
+      "createdAt": "2023-09-03T11:20:00Z"
+    },
+    {
+      "rating": 5,
+      "comment": "Excellent battery life.",
+      "createdAt": "2023-09-07T14:50:00Z"
+    }
+  ],
+  "averageRating": 4.5
+},
+{
+  "_id": {
+    "$oid": "66ef3a09a9386459fe44f85d"
+  },
+  "name": "Mobile",
+  "price": "30000.00",
+  "description": "Latest smartphone with advanced features.",
+  "images": [
+    "mobile1.jpg",
+    "mobile2.jpg",
+    "mobile3.jpg"
+  ],
+  "variants": [
+    {
+      "color": "Black",
+      "storage": "128GB",
+      "price": "40000.00",
+      "images": [
+        "mobile_black.jpg"
+      ]
+    },
+    {
+      "color": "White",
+      "storage": "256GB",
+      "price": "50000.00",
+      "images": [
+        "mobile_white.jpg"
+      ]
+    }
+  ],
+  "category": "Electronics",
+  "tags": [
+    "smartphone",
+    "popular"
+  ],
+  "reviews": [
+    {
+      "rating": 5,
+      "comment": "Amazing camera quality!",
+      "createdAt": "2023-09-04T08:30:00Z"
+    },
+    {
+      "rating": 4,
+      "comment": "Fast performance.",
+      "createdAt": "2023-09-08T16:00:00Z"
+    }
+  ],
+  "averageRating": 4.5
+}]

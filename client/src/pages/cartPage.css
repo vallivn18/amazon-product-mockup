@@ -1,0 +1,132 @@
+.cart-page {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    font-family:  sans-serif;
+}
+
+.cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.empty-cart {
+    font-size: 22px;    
+    color: #555;               
+    text-align: center;               
+    margin: 40px 0;               
+    padding: 20px;                
+    background-color: #f9f9f9;       
+    border: 2px dashed #ccc;         
+    border-radius: 10px;            
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s; 
+    text-decoration: none;
+    cursor: pointer; 
+}
+
+.empty-cart:hover {
+    background-color: #e8e8e8;       
+}
+
+.empty-cart-icon {
+    font-size: 50px;              
+    color: #888;                    
+    margin-bottom: 10px;            
+}
+
+.empty-cart-text {            
+    font-weight: bold;  
+    text-decoration: none;
+    margin: 20px;
+    margin-bottom: 120px;
+    transition: color 0.3s ease; 
+}
+
+.empty-cart :hover{
+    color: #961ff7;
+}
+
+/* Cart summary styles */
+.cart-summary {
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.total-price {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.checkout-button {
+    background-color: #56338f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover {
+    background-color: #961ff7;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+    .cart-items {
+        flex-direction: column;
+    }
+}
+
+
+.cart-page {
+    padding: 20px;
+}
+
+.cart-items {
+    margin-bottom: 20px;
+}
+
+.cart-summary-container {
+    display: flex;
+    justify-content: space-between; /* Space between left and right sections */
+}
+
+.promotions-section {
+    width: 30%; /* Adjust the width as needed */
+    margin-right: 20px; /* Space between promo and summary */
+}
+
+.cart-summary {
+    width: 65%; /* Adjust the width as needed */
+}
+
+.total-price {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.checkout-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+
+.original-price {
+    color: red; 
+    text-decoration: line-through;
+    margin-bottom: 30px;
+}
+
+.discount-info {
+    color: green; 
+    margin-top: 30px;
+    margin-left: 5px; 
+}

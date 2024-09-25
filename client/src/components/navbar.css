@@ -1,0 +1,149 @@
+/* Navbar general layout */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #fff;
+  color: #000;
+  font-family: sans-serif;
+  font-size: 18px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Navbar Logo and Branding */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  margin-right: 10px;
+}
+
+/* Navbar Links */
+.navbar-links {
+  display: flex;
+  gap: 80px;
+}
+
+.navbar-links a {
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar-links a:hover {
+  color: #2e00ac;
+}
+
+/* Cart Link with Icon */
+.cart-container {
+  position: relative; /* Position relative for dropdown */
+}
+
+.cart-link {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.cart-count {
+  background-color: #7400aa; /* Red background for the count */
+  color: white; /* White text color */
+  border-radius: 50%; /* Make it circular */
+  padding: 3px 6px; /* Padding for better spacing */
+  font-size: 14px; /* Font size */
+  margin-left: 5px; /* Space between icon and count */
+}
+
+/* Cart Dropdown */
+.cart-dropdown {
+  position: absolute; /* Position absolutely relative to the cart link */
+  top: 100%; /* Below the cart link */
+  right: 0; /* Align to the right */
+  background-color: white;
+  border: 1px solid #ddd; /* Light border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for better visibility */
+  padding: 10px;
+  z-index: 20; /* Ensure dropdown is on top */
+  width: 300px; /* Fixed width for dropdown */
+}
+
+.cart-item-preview {
+  display: flex; /* Flex layout for item preview */
+  margin-bottom: 10px; /* Spacing between items */
+}
+
+.cart-item-image {
+  width: 50px; /* Fixed width for images */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Spacing between image and text */
+}
+
+.cart-item-details {
+  display: flex;
+  flex-direction: column; /* Stack name and quantity */
+}
+
+.cart-item-name {
+  font-weight: bold; /* Highlight item name */
+}
+
+.cart-item-quantity {
+  color: #777; /* Slightly lighter color for quantity */
+}
+
+.view-cart-button {
+  display: block; /* Block to make it full-width */
+  text-align: center; /* Center text */
+  margin-top: 10px; /* Spacing above button */
+  background-color: #2e00ac; /* Button background */
+  color: white; /* Button text color */
+  padding: 8px 0; /* Padding for button */
+  text-decoration: none; /* Remove underline */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.view-cart-button:hover {
+  background-color: #1a0074; /* Darker shade on hover */
+}
+
+/* Hamburger Menu Icon (for mobile) */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .navbar {
+    padding: 15px;
+  }
+
+  .menu-icon {
+    display: block; /* Show menu icon on mobile */
+  }
+
+  .navbar-links {
+    display: none; /* Initially hidden on mobile */
+    position: absolute;
+    top: 60px; /* Place the links below the navbar */
+    background-color: #fff;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-links.active {
+    display: flex; /* Show links when menu is active */
+  }
+}

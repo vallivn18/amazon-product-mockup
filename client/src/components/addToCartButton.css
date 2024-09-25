@@ -1,0 +1,65 @@
+.add-to-cart {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; 
+  margin-top: 10px;
+}
+.quantity{
+  margin-top: 8px;
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: larger;
+}
+.quantity-input-container {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #4f04c7; 
+  border-radius: 25px; 
+  overflow: hidden; 
+}
+
+.quantity-button {
+  padding: 5px 10px;
+  border: none;
+  background-color: white;
+  color: #5003b4;
+  cursor: pointer;
+  
+  transition: background-color 0.2s ease;
+}
+
+.quantity-button:hover {
+  background-color: #4d0786c9;
+  border-radius: 15px; 
+  color: white;
+}
+
+.quantity-selector{
+  display: flex;
+  
+}
+
+.quantity-input {
+  width: 100%; 
+  border: none; 
+  text-align: center;
+  font-size: 1rem; /* Smaller font size for better proportion */
+  outline: none; /* Remove outline */
+  color: #333; /* Text color */
+  border-radius: 25px; /* Match the container's radius */
+}
+
+
+.add-to-cart-button {
+  background-color: #2f007a;
+  float: left;
+  color: white;
+  margin-left: 10px;
+  border: none;
+  border-radius: 4px;
+  width: 80%;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+}

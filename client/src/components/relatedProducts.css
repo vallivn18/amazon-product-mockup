@@ -1,0 +1,75 @@
+.related-products {
+  margin: 20px 0;
+}
+
+.related-products-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.cards {
+  display: flex;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scroll */
+  gap: 10px; /* Space between cards */
+  padding: 10px 0; /* Padding for the slider */
+}
+
+.related-product-card {
+  min-width: 180px; /* Reduced width for cards */
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s; /* Animation effect */
+}
+
+.related-product-card:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.related-product-image {
+  width: 100%; /* Image fills the card */
+  height: 120px; /* Fixed height for images */
+  object-fit: cover; /* Maintain aspect ratio */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.related-product-name {
+  font-size: 16px; /* Slightly smaller font */
+  margin: 10px 0 5px;
+}
+
+.related-product-price {
+  font-size: 14px; /* Slightly smaller font */
+  color: #333;
+}
+
+.slider-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+  user-select: none;
+}
+
+.slider-button.left {
+  margin-right: 10px; /* Space between button and cards */
+}
+
+.slider-button.right {
+  margin-left: 10px; /* Space between button and cards */
+}
+
+.slider-button:hover {
+  color: #007bff; /* Change color on hover */
+}
