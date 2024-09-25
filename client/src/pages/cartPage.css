@@ -1,68 +1,87 @@
+/* Cart Page Container */
 .cart-page {
     max-width: 1200px;
     margin: auto;
     padding: 20px;
     background: #f8f8f8;
     border-radius: 8px;
-    font-family:  sans-serif;
+    font-family: sans-serif;
 }
 
+/* Cart Items Wrapper */
 .cart-items {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
+/* Empty Cart Styling */
 .empty-cart {
-    font-size: 22px;    
-    color: #555;               
-    text-align: center;               
-    margin: 40px 0;               
-    padding: 20px;                
-    background-color: #f9f9f9;       
-    border: 2px dashed #ccc;         
-    border-radius: 10px;            
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    transition: background-color 0.3s; 
+    font-size: 22px;
+    color: #555;
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
     text-decoration: none;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 .empty-cart:hover {
-    background-color: #e8e8e8;       
+    background-color: #e8e8e8;
 }
 
 .empty-cart-icon {
-    font-size: 50px;              
-    color: #888;                    
-    margin-bottom: 10px;            
+    font-size: 50px;
+    color: #888;
+    margin-bottom: 10px;
 }
 
-.empty-cart-text {            
-    font-weight: bold;  
+.empty-cart-text {
+    font-weight: bold;
     text-decoration: none;
     margin: 20px;
     margin-bottom: 120px;
-    transition: color 0.3s ease; 
+    transition: color 0.3s ease;
 }
 
-.empty-cart :hover{
+.empty-cart-text:hover {
     color: #961ff7;
 }
 
-/* Cart summary styles */
+/* Cart Summary & Promo Section Container */
+.cart-summary-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Promotions Section */
+.promotions-section {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Cart Summary */
 .cart-summary {
     padding: 15px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 .total-price {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 20px;
 }
 
+/* Checkout Button Styling */
 .checkout-button {
     background-color: #56338f;
     color: white;
@@ -70,6 +89,7 @@
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
     transition: background-color 0.3s ease;
 }
 
@@ -77,56 +97,44 @@
     background-color: #961ff7;
 }
 
-/* Media queries for smaller screens */
+.original-price {
+    color: red;
+    text-decoration: line-through;
+    margin-bottom: 10px;
+}
+
+.discount-info {
+    color: green;
+    margin-left: 5px;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .cart-summary-container {
+        flex-wrap: nowrap;
+    }
+
+    .promotions-section {
+        width: 30%;
+        margin-right: 20px;
+    }
+
+    .cart-summary {
+        width: 65%;
+    }
+}
+
 @media (max-width: 768px) {
     .cart-items {
         flex-direction: column;
     }
-}
 
+    .cart-summary-container {
+        flex-direction: column;
+    }
 
-.cart-page {
-    padding: 20px;
-}
-
-.cart-items {
-    margin-bottom: 20px;
-}
-
-.cart-summary-container {
-    display: flex;
-    justify-content: space-between; /* Space between left and right sections */
-}
-
-.promotions-section {
-    width: 30%; /* Adjust the width as needed */
-    margin-right: 20px; /* Space between promo and summary */
-}
-
-.cart-summary {
-    width: 65%; /* Adjust the width as needed */
-}
-
-.total-price {
-    font-size: 20px;
-    margin-top: 10px;
-}
-
-.checkout-button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    font-size: 16px;
-}
-
-
-.original-price {
-    color: red; 
-    text-decoration: line-through;
-    margin-bottom: 30px;
-}
-
-.discount-info {
-    color: green; 
-    margin-top: 30px;
-    margin-left: 5px; 
+    .promotions-section,
+    .cart-summary {
+        width: 100%;
+    }
 }
