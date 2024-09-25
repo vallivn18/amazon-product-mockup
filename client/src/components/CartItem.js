@@ -5,24 +5,22 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import "./cartItem.css";
 
 const CartItem = ({ item, onQuantityChange, onRemoveItem }) => {
-  const { productId, variant, quantity, productName } = item; // Ensure item structure is correct
+  const { productId, variant, quantity, productName } = item;
 
-  // Ensure productId is accessed correctly
-  const productID = productId._id || productId; // Use productId._id if it exists, otherwise fallback
+  const productID = productId._id || productId; 
 
   const handleQuantityChange = (newQuantity) => {
-    if (newQuantity <= 0) return; // Prevent setting quantity to 0 or negative
-    onQuantityChange(item._id, newQuantity); // Use the correct product ID for quantity change
+    if (newQuantity <= 0) return;
+    onQuantityChange(item._id, newQuantity); 
   };
 
   return (
     <div className="cart-item">
-      {/* Wrap the details in a Link for redirection to the product page */}
       <Link to={`/product/${productID}`} className="cart-item-link">
         <div className="cart-item-details">
           {variant.images && variant.images.length > 0 ? (
             <img
-              src={`https://amazon-product-mockup-server.vercel.app/images/${variant.images[0]}`} // Updated to use images from variant
+              src={`https://amazon-product-mockup-server.vercel.app/images/${variant.images[0]}`} 
               alt={variant.color}
               className="cart-item-image"
             />
@@ -61,8 +59,8 @@ const CartItem = ({ item, onQuantityChange, onRemoveItem }) => {
         <button
           className="remove-button"
           onClick={(e) => {
-            e.stopPropagation(); // Prevent the link click event from firing
-            onRemoveItem(item._id); // Call the remove item function
+            e.stopPropagation(); 
+            onRemoveItem(item._id); 
           }}
         >
           <FontAwesomeIcon icon={faTrash} />
