@@ -141,6 +141,7 @@ const ProductPage = () => {
                 productName={product.name}
                 selectedVariant={selectedVariant}
                 quantity={quantity}
+                stock={product.stock}
               />
             </div>
           ) : (
