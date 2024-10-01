@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './addToCartButton.css';
 import { addToCart } from '../api/api';
-import { ToastContainer, toast } from 'react-toastify'; // Import toast and ToastContainer
+import { ToastContainer, toast } from 'react-toastify';
 
-const AddToCartButton = ({ productId, productName, selectedVariant }) => {
+const AddToCartButton = ({ productId, productName, selectedVariant, stock }) => {
     const [quantity, setQuantity] = useState(1);
 
     const handleAddToCart = async () => {
@@ -11,11 +11,10 @@ const AddToCartButton = ({ productId, productName, selectedVariant }) => {
             toast.error('Please select a variant.');
             return;
         }
-
-        // Prepare the data to be added to the cart
         const data = {
             productId,
             productName,
+            stock,
             variant: {
                 color: selectedVariant.color,
                 storage: selectedVariant.storage,
@@ -26,7 +25,7 @@ const AddToCartButton = ({ productId, productName, selectedVariant }) => {
         };
 
         try {
-            const response = await addToCart(data);
+            await addToCart(data);
             toast.success(`${productName} has been added to your cart!`);
             setTimeout(() => {
                 window.location.reload();
@@ -38,7 +37,7 @@ const AddToCartButton = ({ productId, productName, selectedVariant }) => {
     };
 
     const incrementQuantity = () => {
-        setQuantity((prev) => prev + 1);
+        setQuantity((prev) => Math.min(prev + 1, stock)); 
     };
 
     const decrementQuantity = () => {
@@ -46,7 +45,7 @@ const AddToCartButton = ({ productId, productName, selectedVariant }) => {
     };
 
     const handleInputChange = (e) => {
-        const value = Math.max(1, parseInt(e.target.value, 10));
+        const value = Math.max(1, Math.min(parseInt(e.target.value, 10), stock));
         setQuantity(isNaN(value) ? 1 : value);
     };
 
@@ -61,6 +60,7 @@ const AddToCartButton = ({ productId, productName, selectedVariant }) => {
                     onChange={handleInputChange}
                     className="quantity-input"
                     min="1"
+                    max={stock}
                 />
                 <button onClick={incrementQuantity} className="quantity-button">+</button>
             </div>
@@ -68,7 +68,6 @@ const AddToCartButton = ({ productId, productName, selectedVariant }) => {
                 Add to Cart
             </button>
 
-            {/* Toast container for notifications */}
             <ToastContainer />
         </div>
     );
